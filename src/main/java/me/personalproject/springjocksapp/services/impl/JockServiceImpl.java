@@ -8,11 +8,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class JockServiceImpl implements JockService {
 
+    private final ChuckNorrisQuotes chuckNorrisQuotes;
+
     @Autowired
-    private ChuckNorrisQuotes chuckNorrisQuotes;
+    public JockServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
+    }
 
     @Override
     public String getJock() {
         return chuckNorrisQuotes.getRandomQuote();
     }
+
 }
