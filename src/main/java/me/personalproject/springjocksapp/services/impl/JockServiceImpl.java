@@ -10,9 +10,8 @@ public class JockServiceImpl implements JockService {
 
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    @Autowired
-    public JockServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
-        this.chuckNorrisQuotes = chuckNorrisQuotes;
+    public JockServiceImpl() {
+        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
     }
 
     @Override
